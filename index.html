@@ -7,36 +7,170 @@
     <!-- === SEO OTIMIZADO === -->
     <title>Yago Fernandes | Desenvolvedor Full Stack Júnior - HTML, CSS, Python, Django</title>
     <meta name="description" content="Desenvolvedor Full Stack Júnior especializado em HTML, CSS, Python e Django. Projetos responsivos, automação e soluções web. Buscando oportunidades como desenvolvedor front-end ou full stack.">
-    <meta name="keywords" content="desenvolvedor full stack júnior, HTML CSS Python Django, programador front-end, desenvolvedor web, Yago Fernandes, portfólio programador, oportunidades TI">
+    <meta name="keywords" content="desenvolvedor full stack júnior, HTML CSS Python Django, programador front-end, desenvolvedor web, Yago Fernandes, portfólio programador, oportunidades TI, Rio de Janeiro">
     <meta name="author" content="Yago Fernandes">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2563eb">
     
     <!-- Open Graph para redes sociais -->
-    <meta property="og:title" content="Yago Fernandes - Desenvolvedor Full Stack">
-    <meta property="og:description" content="Portfólio de desenvolvedor Full Stack especializado em HTML, CSS, Python e Django">
+    <meta property="og:title" content="Yago Fernandes - Desenvolvedor Full Stack Júnior">
+    <meta property="og:description" content="Portfólio de desenvolvedor Full Stack especializado em HTML, CSS, Python e Django. Confira meus projetos e entre em contato!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yagofc23.github.io">
     <meta property="og:image" content="https://yagofc23.github.io/image/fp%20vm.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Yago Fernandes - Portfólio">
+    
+    <!-- Meta tags adicionais para SEO -->
+    <link rel="canonical" href="https://yagofc23.github.io">
+    <meta name="geo.region" content="BR-RJ">
+    <meta name="geo.placename" content="Rio de Janeiro">
+    <meta name="language" content="Portuguese">
+    <meta name="rating" content="general">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yago Fernandes da Costa",
+        "jobTitle": "Desenvolvedor Full Stack Júnior",
+        "url": "https://yagofc23.github.io",
+        "sameAs": [
+            "https://github.com/yagofc23",
+            "https://instagram.com/yagofernandesdacosta"
+        ],
+        "knowsAbout": ["HTML", "CSS", "Python", "Django", "Bootstrap", "Git", "GitHub"],
+        "description": "Desenvolvedor Full Stack Júnior especializado em HTML, CSS, Python e Django",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Senac"
+        }
+    }
+    </script>
+    
     <!-- === FIM DO SEO === -->
     
     <!-- Preload para recursos críticos -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://api.qrserver.com">
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- CSS Inline Crítico -->
+    <style>
+        /* CSS crítico para renderização inicial */
+        .navbar { 
+            transition: all 0.3s ease; 
+        }
+        .hero-section { 
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            color: white;
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #2563eb;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        /* Loading states */
+        .loading-skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Acessibilidade */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Correção do link de certificações no menu */
+        .navbar-nav .nav-link.active {
+            color: #3b82f6 !important;
+            font-weight: 600;
+        }
+
+        /* Melhorias visuais para certificações */
+        .certification-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .certification-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Estatísticas atualizadas */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+    </style>
+    
+    <!-- CSS externo carregado de forma assíncrona -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback para navegadores sem JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
 </head>
 <body>
+    <!-- Loading inicial -->
+    <div id="loading" class="position-fixed w-100 h-100 d-flex align-items-center justify-content-center bg-white" style="z-index: 9999;">
+        <div class="text-center">
+            <div class="spinner-border text-primary mb-3" role="status">
+                <span class="visually-hidden">Carregando portfólio...</span>
+            </div>
+            <p>Carregando portfólio...</p>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#" aria-label="Yago Fernandes - Página inicial">Yago Fernandes</a>
+            <a class="navbar-brand" href="#" aria-label="Yago Fernandes - Página inicial">
+                <strong>Yago Fernandes</strong>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -69,15 +203,15 @@
     <section id="inicio" class="hero-section" aria-labelledby="hero-heading">
         <div class="container text-center">
             <h1 class="display-4 fw-bold" id="hero-heading">Olá, eu sou Yago Fernandes da Costa</h1>
-            <p class="lead">Desenvolvedor Full Stack | HTML | CSS | Python | Django</p>
+            <p class="lead">Desenvolvedor Full Stack Júnior | HTML | CSS | Python | Django</p>
             
             <!-- Botões de Call-to-Action -->
             <div class="mt-4">
-                <a href="#projetos" class="btn btn-light btn-lg me-3">🚀 Ver Projetos</a>
-                <a href="#contato" class="btn btn-outline-light btn-lg">💼 Oportunidades</a>
+                <a href="#projetos" class="btn btn-light btn-lg me-3" aria-label="Ver meus projetos">🚀 Ver Projetos</a>
+                <a href="#contato" class="btn btn-outline-light btn-lg" aria-label="Ver oportunidades de trabalho">💼 Oportunidades</a>
             </div>
             
-            <!-- Estatísticas -->
+            <!-- Estatísticas ATUALIZADAS -->
             <div class="row mt-5">
                 <div class="col-md-3">
                     <h4 class="stat-number">+3</h4>
@@ -105,15 +239,15 @@
             <h2 class="section-title" id="sobre-heading">Sobre Mim</h2>
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-4">
-                    <img src="./image/fp vm.jpg" alt="Foto de perfil de Yago Fernandes" class="img-fluid rounded-circle" loading="lazy">
+                    <img src="./image/fp%20vm.jpg" alt="Yago Fernandes - Desenvolvedor Full Stack Júnior" class="img-fluid rounded-circle" loading="lazy" width="300" height="300" style="object-fit: cover;">
                 </div>
                 <div class="col-md-8">
-                    <p>Olá, meu nome é Yago Fernandes da Costa, tenho 21 anos e sou um programador full stack apaixonado por criar soluções digitais inovadoras.</p>
-                    <p>Atualmente cursando Análise e Desenvolvimento de Sistemas no Senac, tenho experiência prática com HTML, CSS, Python e Django, desenvolvendo projetos que unem design e funcionalidade.</p>
+                    <p>Olá, meu nome é <strong>Yago Fernandes da Costa</strong>, tenho 21 anos e sou um <strong>programador full stack júnior</strong> apaixonado por criar soluções digitais inovadoras.</p>
+                    <p>Atualmente cursando <strong>Análise e Desenvolvimento de Sistemas no Senac</strong>, tenho experiência prática com <strong>HTML, CSS, Python e Django</strong>, desenvolvendo projetos que unem design e funcionalidade.</p>
                     <p>Minha paixão por tecnologia me motiva a estar sempre aprendendo e aprimorando minhas habilidades. Acredito que a dedicação e a busca constante por conhecimento são fundamentais para o crescimento profissional.</p>
-                    <p>Como programador full stack certificado pelo Senac, domino tanto o desenvolvimento front-end quanto back-end, permitindo-me criar experiências web completas e eficientes.</p>
+                    <p>Como <strong>programador full stack certificado pelo Senac</strong>, domino tanto o desenvolvimento front-end quanto back-end, permitindo-me criar experiências web completas e eficientes.</p>
                     <a href="./Currículo-Yago-Fernandes.pdf" download="Currículo-Yago-Fernandes.pdf" class="btn btn-primary mt-3">
-                        <i class="fas fa-download me-2" aria-hidden="true"></i>Baixar Currículo
+                        <i class="fas fa-download me-2" aria-hidden="true"></i>Baixar Currículo PDF
                     </a>
                 </div>
             </div>
@@ -123,15 +257,15 @@
     <!-- Habilidades -->
     <section id="habilidades" class="py-5 bg-light" aria-labelledby="habilidades-heading">
         <div class="container">
-            <h2 class="section-title" id="habilidades-heading">Minhas Habilidades</h2>
+            <h2 class="section-title" id="habilidades-heading">Minhas Habilidades Técnicas</h2>
             <div class="row">
                 <div class="col-md-6">
                     <!-- HTML/CSS -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo me-3" loading="lazy">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo me-3" loading="lazy">
-                            <h5 class="mb-0">HTML/CSS</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">HTML5 & CSS3</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -141,7 +275,7 @@
                     <!-- Python -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo me-3" loading="lazy">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo me-3" loading="lazy" width="32" height="32">
                             <h5 class="mb-0">Python</h5>
                         </div>
                         <div class="skill-bar">
@@ -152,8 +286,8 @@
                     <!-- Django -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-logo me-3" loading="lazy">
-                            <h5 class="mb-0">Django</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">Django Framework</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -163,9 +297,9 @@
                     <!-- Git/GitHub -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo me-3" loading="lazy">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo me-3" loading="lazy">
-                            <h5 class="mb-0">Git/GitHub</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">Git & GitHub</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -177,8 +311,8 @@
                     <!-- Front-end -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Frontend" class="skill-logo me-3" style="filter: grayscale(1) brightness(2);" loading="lazy">
-                            <h5 class="mb-0">Front-end</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Frontend" class="skill-logo me-3" style="filter: grayscale(1) brightness(2);" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">Desenvolvimento Front-end</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -188,8 +322,8 @@
                     <!-- Back-end -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Backend" class="skill-logo me-3" style="filter: grayscale(1) brightness(2);" loading="lazy">
-                            <h5 class="mb-0">Back-end</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Backend" class="skill-logo me-3" style="filter: grayscale(1) brightness(2);" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">Desenvolvimento Back-end</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -199,8 +333,8 @@
                     <!-- VS Code -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo me-3" loading="lazy">
-                            <h5 class="mb-0">VS Code</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">Visual Studio Code</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
@@ -210,8 +344,8 @@
                     <!-- Bootstrap -->
                     <div class="skill-item mb-4">
                         <div class="skill-header d-flex align-items-center mb-2">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-logo me-3" loading="lazy">
-                            <h5 class="mb-0">Bootstrap</h5>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-logo me-3" loading="lazy" width="32" height="32">
+                            <h5 class="mb-0">Bootstrap Framework</h5>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -230,22 +364,22 @@
                 <div class="col-md-6 mb-4">
                     <div class="certification-item text-white p-4 h-100">
                         <h5>🎓 Programador Full Stack</h5>
-                        <p><strong>Senac</strong> | 2025</p>
-                        <p>Certificação em desenvolvimento web full stack com foco em HTML, CSS, JavaScript, Python e frameworks modernos.</p>
+                        <p><strong>Senac Rio</strong> | 2025</p>
+                        <p>Certificação completa em desenvolvimento web full stack com foco em HTML, CSS, JavaScript, Python e frameworks modernos para criação de aplicações web responsivas.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="certification-item text-white p-4 h-100">
                         <h5>📚 Análise e Desenvolvimento de Sistemas</h5>
-                        <p><strong>Senac</strong> | Cursando</p>
-                        <p>Graduação tecnológica com previsão de conclusão em 2025. Foco em desenvolvimento de software, banco de dados e engenharia de software.</p>
+                        <p><strong>Senac Rio</strong> | Cursando</p>
+                        <p>Graduação tecnológica com previsão de conclusão em 2025. Curso focado em desenvolvimento de software, banco de dados, engenharia de software e gestão de projetos.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="certification-item text-white p-4 h-100">
                         <h5>💼 Pacote Office Completo</h5>
                         <p><strong>Microsoft Office Specialist</strong> | Concluído</p>
-                        <p>Certificação em ferramentas de produtividade Microsoft Office:</p>
+                        <p>Certificação em ferramentas de produtividade Microsoft Office essenciais para o ambiente corporativo:</p>
                         <ul class="mt-2">
                             <li>Word - Processamento de texto avançado</li>
                             <li>Excel - Planilhas e análise de dados</li>
@@ -256,9 +390,9 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="certification-item text-white p-4 h-100">
-                        <h5>🌐 Desenvolvimento Web</h5>
+                        <h5>🌐 Desenvolvimento Web Moderno</h5>
                         <p><strong>Various Platforms</strong> | Contínuo</p>
-                        <p>Certificações complementares em tecnologias web modernas incluindo responsividade, acessibilidade e melhores práticas de desenvolvimento.</p>
+                        <p>Certificações complementares em tecnologias web modernas incluindo responsividade, acessibilidade, performance e melhores práticas de desenvolvimento front-end e back-end.</p>
                     </div>
                 </div>
             </div>
@@ -268,72 +402,70 @@
     <!-- Projetos -->
     <section id="projetos" class="py-5" aria-labelledby="projetos-heading">
         <div class="container">
-            <h2 class="section-title" id="projetos-heading">Meus Projetos</h2>
+            <h2 class="section-title" id="projetos-heading">Meus Projetos em Destaque</h2>
             <div class="row">
 
                 <!-- Projeto 1 -->
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                        <img src="./image/death note.png" class="card-img-top" alt="Death Note Online" loading="lazy">
+                        <img src="./image/death%20note.png" alt="Projeto Death Note Online - Landing Page Temática" class="card-img-top" loading="lazy" width="400" height="250" style="object-fit: cover;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">📓 Landing Page Temática "Death Note"</h5>
+                            <h3 class="card-title h5">📓 Landing Page Temática "Death Note"</h3>
                         <p class="card-text flex-grow-1">
-                            <strong>Problema:</strong> Recriar a atmosfera sombria e a identidade visual icônica do anime (fontes, cores, layout) usando apenas HTML5 e CSS3, de forma que fosse fiel ao original.<br><br>
-                            <strong>Solução:</strong> Desenvolvimento de uma landing page estática e responsiva, focada na fidelidade visual. Foi usado CSS avançado para estilização de fontes customizadas e um layout "dark mode" imersivo.<br><br>
-                            <strong>Resultado:</strong> Um projeto que demonstra forte habilidade em **Estilização com CSS3**, **HTML5 Semântico** e **Design Responsivo**.
+                            <strong>Desafio:</strong> Recriar a atmosfera sombria e a identidade visual icônica do anime Death Note usando apenas HTML5 e CSS3 puro.<br><br>
+                            <strong>Solução Técnica:</strong> Desenvolvimento de uma landing page estática e totalmente responsiva, focada na fidelidade visual com CSS avançado para estilização de fontes customizadas e layout "dark mode" imersivo.<br><br>
+                            <strong>Resultado:</strong> Projeto que demonstra expertise em <strong>Estilização com CSS3</strong>, <strong>HTML5 Semântico</strong> e <strong>Design Responsivo</strong>.
                         </p>
                             <div class="tech-tags mb-3">
                                 <span class="badge bg-primary">HTML5</span>
                                 <span class="badge bg-primary">CSS3</span>
-                                <span class="badge bg-success">Responsivo</span>
+                                <span class="badge bg-success">Design Responsivo</span>
+                                <span class="badge bg-info">Web Design</span>
                             </div>
                             <div class="mt-auto">
-                                <a href="https://github.com/yagofc23/Death-Note-online.git" class="btn btn-primary">📁 Ver Código</a>
-                                <a href=" https://yagofc23.github.io/Death-Note-online/" class="btn btn-outline-primary">🌐 Demo Online</a>
+                                <a href="https://github.com/yagofc23/Death-Note-online.git" class="btn btn-primary" aria-label="Ver código fonte do projeto Death Note">📁 Ver Código</a>
+                                <a href="https://yagofc23.github.io/Death-Note-online/" class="btn btn-outline-primary" aria-label="Ver demonstração online do projeto Death Note">🌐 Demo Online</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Projeto 2 -->
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                        <img src="image/projeto 2.png" class="card-img-top" alt="Automação Python" loading="lazy">
+                        <img src="image/projeto%202.png" alt="Projeto Web Scraper Python - Automação de Notícias G1" class="card-img-top" loading="lazy" width="400" height="250" style="object-fit: cover;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">🤖 Web Scraper de Notícias (G1)</h5>
+                            <h3 class="card-title h5">🤖 Web Scraper de Notícias (Portal G1)</h3>
 <p class="card-text flex-grow-1">
-    <strong>Problema:</strong> A coleta manual de dados (manchetes de notícias) de sites é um processo lento, repetitivo e ineficiente para monitoramento de informações.<br> <br>
-    <strong>Solução:</strong> Um script de automação (Web Scraper) desenvolvido em Python que acessa o portal G1, analisa o código HTML da página e extrai automaticamente todas as manchetes principais.<br> <br>
-    <strong>Resultado:</strong> Dados coletados e organizados em um arquivo `.txt` em segundos, demonstrando habilidade prática com Python e as bibliotecas `requests` e `BeautifulSoup`. <br>
+    <strong>Desafio:</strong> A coleta manual de dados (manchetes de notícias) de sites é um processo lento, repetitivo e ineficiente para monitoramento de informações.<br><br>
+    <strong>Solução Técnica:</strong> Script de automação (Web Scraper) desenvolvido em Python utilizando as bibliotecas requests e BeautifulSoup para acessar o portal G1, analisar o código HTML e extrair automaticamente todas as manchetes principais.<br><br>
+    <strong>Resultado:</strong> Dados coletados e organizados em arquivo estruturado em segundos, demonstrando habilidade prática com <strong>Python</strong>, <strong>Automação</strong> e <strong>Web Scraping</strong>.
 </p>
                             <div class="tech-tags mb-3">
                                 <span class="badge bg-primary">Python</span>
-                                <span class="badge bg-success">Automação</span>
-                                <span class="badge bg-info">Scripting</span>
+                                <span class="badge bg-success">Web Scraping</span>
+                                <span class="badge bg-info">Automação</span>
+                                <span class="badge bg-warning">BeautifulSoup</span>
                             </div>
                             <div class="mt-auto">
-                                <a href="https://github.com/yagofc23/automacao-python-g1" class="btn btn-primary">📁 Ver Código  </a>
+                                <a href="https://github.com/yagofc23/automacao-python-g1" class="btn btn-primary" aria-label="Ver código fonte do Web Scraper">📁 Ver Código</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Projeto 3: Gerenciador de Links -->
-<div class="col-md-4">
+<div class="col-md-4 mb-4">
     <div class="card h-100">
-        <!-- Imagem atualizada -->
-        <img src="image/gerenciador de links.png" class="card-img-top" alt="Gerenciador de Links Full Stack" loading="lazy">
+        <img src="image/gerenciador%20de%20links.png" alt="Projeto Gerenciador de Links Full-Stack - Aplicação Web Completa" class="card-img-top" loading="lazy" width="400" height="250" style="object-fit: cover;">
         
         <div class="card-body d-flex flex-column">
-            <!-- Título atualizado -->
-            <h5 class="card-title">🔗 Gerenciador de Links Full-Stack</h5>
+            <h3 class="card-title h5">🔗 Gerenciador de Links Full-Stack</h3>
             
             <p class="card-text flex-grow-1">
-                <strong>Problema:</strong> A necessidade de gerenciar e organizar links pessoais (favoritos) de forma persistente, que seja mais robusta e customizável do que os favoritos do navegador.
-                <br><br>
-                <strong>Solução:</strong> Desenvolvimento de uma aplicação web full-stack completa. O back-end, construído em Python com Flask e SQLAlchemy, gerencia um banco de dados SQLite. O front-end permite que o usuário Crie, Leia, Edite e Exclua (CRUD) links de forma intuitiva.
-                <br><br>
-                <strong>Resultado:</strong> Um aplicativo web 100% funcional que demonstra o ciclo completo de desenvolvimento, integrando a interface do usuário, a lógica do servidor e a persistência de dados.
+                <strong>Desafio:</strong> Criar uma solução robusta para gerenciar e organizar links pessoais de forma mais eficiente que os favoritos tradicionais do navegador.<br><br>
+                <strong>Solução Técnica:</strong> Aplicação web full-stack completa com back-end em Python usando Flask e SQLAlchemy para gerenciar banco de dados SQLite, e front-end responsivo permitindo operações CRUD completas de forma intuitiva.<br><br>
+                <strong>Resultado:</strong> Aplicativo web 100% funcional demonstrando domínio do <strong>ciclo completo de desenvolvimento</strong>, integrando interface do usuário, lógica de servidor e persistência de dados.
             </p>
             
             <div class="tech-tags mb-3">
@@ -342,11 +474,12 @@
                 <span class="badge bg-primary">SQLAlchemy</span>
                 <span class="badge bg-primary">CSS3</span>
                 <span class="badge bg-success">CRUD</span>
+                <span class="badge bg-info">Full-Stack</span>
             </div>
             
             <div class="mt-auto">
-                <a href="https://github.com/yagofc23/gerenciador-de-link" class="btn btn-primary">📁 Ver Código</a>
-                <a href="https://yagofc2305.pythonanywhere.com/" class="btn btn-outline-primary">🌐 Demo Online</a>
+                <a href="https://github.com/yagofc23/gerenciador-de-link" class="btn btn-primary" aria-label="Ver código fonte do Gerenciador de Links">📁 Ver Código</a>
+                <a href="https://yagofc2305.pythonanywhere.com/" class="btn btn-outline-primary" aria-label="Ver demonstração online do Gerenciador de Links">🌐 Demo Online</a>
             </div>
         </div>
     </div>
@@ -361,22 +494,37 @@
             <h2 class="section-title" id="contato-heading">Entre em Contato</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <form action="https://formspree.io/f/manlwnlq" method="POST">
+                    <form action="https://formspree.io/f/manlwnlq" method="POST" id="contact-form">
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" required placeholder="digite o seu nome">
+                            <label for="nome" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required placeholder="Digite seu nome completo">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" required placeholder="digite o seu email">
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label">Assunto</label>
+                            <select class="form-select" id="assunto" name="assunto">
+                                <option value="">Selecione o assunto...</option>
+                                <option value="oportunidade">Oportunidade de Emprego</option>
+                                <option value="freelance">Projeto Freelance</option>
+                                <option value="colaboracao">Colaboração</option>
+                                <option value="duvida">Dúvida Técnica</option>
+                                <option value="outro">Outro</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="mensagem" class="form-label">Mensagem</label>
                             <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required placeholder="Tem um projeto ou oportunidade? Vamos conversar! 
-Estou disponível para colaborações, freelances e posições full-time. 
-Será um prazer ajudar a transformar suas ideias em realidade."></textarea>
+
+Estou disponível para colaborações, freelances e posições full-time como Desenvolvedor Full Stack Júnior.
+
+Será um prazer ajudar a transformar suas ideias em realidade digital!"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                            <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+                        </button>
                     </form>
                 </div>
             </div>
@@ -389,25 +537,25 @@ Será um prazer ajudar a transformar suas ideias em realidade."></textarea>
             <h2 class="section-title text-white" id="oportunidades-heading">🚀 Buscando Oportunidades</h2>
             <p class="lead text-white mb-4">
                 Estou disponível para posições como <strong>Desenvolvedor Full Stack Júnior</strong>, 
-                <strong>Front-end Developer</strong> ou <strong>Estágio em Desenvolvimento</strong>
+                <strong>Front-end Developer</strong>, <strong>Back-end Developer</strong> ou <strong>Estágio em Desenvolvimento</strong>
             </p>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="text-white">
                         <h4>💻 Front-end</h4>
-                        <p>HTML, CSS, Bootstrap<br>Design Responsivo</p>
+                        <p>HTML5, CSS3, Bootstrap<br>Design Responsivo, UX/UI</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="text-white">
                         <h4>⚙️ Back-end</h4>
-                        <p>Python, Django, Flask<br>Automação</p>
+                        <p>Python, Django, Flask<br>APIs, Automação, Scripting</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="text-white">
                         <h4>🛠 Ferramentas</h4>
-                        <p>Git, GitHub, Office<br>VS Code</p>
+                        <p>Git, GitHub, VS Code<br>Microsoft Office, Figma</p>
                     </div>
                 </div>
             </div>
@@ -416,36 +564,145 @@ Será um prazer ajudar a transformar suas ideias em realidade."></textarea>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <div class="footer-links">
-                <a href="https://github.com/yagofc23" target="_blank" class="footer-link" aria-label="GitHub de Yago Fernandes">
-                    <i class="fab fa-github" aria-hidden="true"></i>
+            <div class="footer-links d-flex flex-wrap justify-content-center gap-4 mb-3">
+                <a href="https://github.com/yagofc23" target="_blank" class="footer-link text-white text-decoration-none" aria-label="GitHub de Yago Fernandes">
+                    <i class="fab fa-github me-2" aria-hidden="true"></i>
                     <span>GitHub: yagofc23</span>
                 </a>
                 
-                <a href="https://wa.me/5521979212853" target="_blank" class="footer-link" aria-label="WhatsApp de Yago Fernandes">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <a href="https://wa.me/5521979212853" target="_blank" class="footer-link text-white text-decoration-none" aria-label="WhatsApp de Yago Fernandes">
+                    <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
                     <span>WhatsApp: (21) 97921-2853</span>
                 </a>
                 
-                <a href="mailto:yagofernandesdacosta@gmail.com" class="footer-link" aria-label="E-mail de Yago Fernandes">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span>Gmail: yagofernandesdacosta@gmail.com</span>
+                <a href="mailto:yagofernandesdacosta@gmail.com" class="footer-link text-white text-decoration-none" aria-label="E-mail de Yago Fernandes">
+                    <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                    <span>E-mail: yagofernandesdacosta@gmail.com</span>
                 </a>
                 
-                <a href="https://instagram.com/yagofernandesdacosta" target="_blank" class="footer-link" aria-label="Instagram de Yago Fernandes">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                    <span>Instagram: yagofernandesdacosta</span>
+                <a href="https://instagram.com/yagofernandesdacosta" target="_blank" class="footer-link text-white text-decoration-none" aria-label="Instagram de Yago Fernandes">
+                    <i class="fab fa-instagram me-2" aria-hidden="true"></i>
+                    <span>Instagram: @yagofernandesdacosta</span>
                 </a>
             </div>
             <div class="text-center mt-4">
-                <p>&copy; 2025 Yago Fernandes. Todos os direitos reservados.</p>
+                <p class="mb-0">&copy; 2025 Yago Fernandes da Costa. Todos os direitos reservados.</p>
+                <p class="small mt-2">Desenvolvedor Full Stack Júnior - Rio de Janeiro, Brasil</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer crossorigin="anonymous"></script>
+    
+    <!-- JavaScript otimizado -->
+    <script>
+        // Remover loading screen quando a página carregar
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loading = document.getElementById('loading');
+                if (loading) {
+                    loading.style.opacity = '0';
+                    setTimeout(() => loading.style.display = 'none', 500);
+                }
+            }, 800);
+        });
+
+        // Smooth scroll para navegação
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Adicionar classe active na navegação
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Otimização do formulário
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    const submitBtn = document.getElementById('submit-btn');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+                    submitBtn.disabled = true;
+                    
+                    // Restaurar botão após 5 segundos (fallback)
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 5000);
+                });
+            }
+
+            // Analytics simples para tracking de engajamento
+            const trackEvent = (category, action) => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', action, {
+                        'event_category': category,
+                        'event_label': window.location.pathname
+                    });
+                }
+            };
+
+            // Track clicks em links importantes
+            document.querySelectorAll('a[href^="http"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('outbound', 'click');
+                });
+            });
+        });
+
+        // Prefetch para links importantes
+        const importantLinks = [
+            'https://github.com/yagofc23',
+            'https://yagofc23.github.io/Death-Note-online/',
+            'https://yagofc2305.pythonanywhere.com/'
+        ];
+
+        importantLinks.forEach(link => {
+            const prefetchLink = document.createElement('link');
+            prefetchLink.rel = 'prefetch';
+            prefetchLink.href = link;
+            document.head.appendChild(prefetchLink);
+        });
+    </script>
 </body>
 </html>
