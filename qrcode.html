@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tela de Bloqueio - Yago Fernandes</title>
+    
+    <style>
+        /* ===== ESTILOS PARA TELA DE BLOQUEIO ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: white;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        /* Efeito de partículas de fundo */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(37, 99, 235, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        /* Container principal */
+        .lockscreen {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        /* Hora e data */
+        .time-container {
+            margin-bottom: 30px;
+        }
+        
+        .time {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .date {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* QR Code Section */
+        .qr-lockscreen {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qr-lockscreen::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(37, 99, 235, 0.1), 
+                transparent);
+            animation: shine 8s infinite linear;
+            pointer-events: none;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(0deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(360deg); }
+        }
+        
+        .qrcode-lock {
+            width: 220px;
+            height: 220px;
+            border-radius: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Informações do perfil */
+        .profile-lock {
+            margin: 25px 0;
+        }
+        
+        .name-lock {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .title-lock {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 5px;
+        }
+        
+        .tagline-lock {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        /* URL do portfólio */
+        .url-lock {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 12px 20px;
+            margin: 20px 0;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            word-break: break-all;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Instruções */
+        .instructions-lock {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 3px solid #f59e0b;
+        }
+        
+        .instructions-lock p {
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            margin: 3px 0;
+        }
+        
+        /* Status bar (simulada) */
+        .status-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            z-index: 3;
+        }
+        
+        .battery {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Botão de ação discreto */
+        .action-btn {
+            position: fixed;
+            bottom: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            z-index: 3;
+        }
+        
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        /* Efeitos de notificação */
+        .notification {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            animation: pulse 2s infinite;
+            z-index: 3;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Modo paisagem (horizontal) */
+        @media (orientation: landscape) and (max-height: 600px) {
+            .lockscreen {
+                transform: scale(0.9);
+            }
+            
+            .time {
+                font-size: 2.5rem;
+            }
+            
+            .qrcode-lock {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        /* Telas muito pequenas */
+        @media (max-width: 360px) {
+            .time {
+                font-size: 3rem;
+            }
+            
+            .qrcode-lock {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .name-lock {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Prevent zoom and touch callouts */
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+        }
+        
+        /* Efeito de desbloqueio (opcional) */
+        .unlock-hint {
+            position: absolute;
+            bottom: 80px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Efeito de partículas -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Barra de status simulada -->
+    <div class="status-bar">
+        <div class="time-small" id="timeSmall">18:45</div>
+        <div class="battery">
+            <span>84%</span>
+            <span>🔋</span>
+        </div>
+    </div>
+    
+    <!-- Notificação simulada -->
+    <div class="notification">
+        📧 2 novas mensagens
+    </div>
+    
+    <!-- Conteúdo principal -->
+    <div class="lockscreen">
+        <!-- Hora e data -->
+        <div class="time-container">
+            <div class="time" id="currentTime">18:45</div>
+            <div class="date" id="currentDate">Sexta-feira, 20 de Dezembro</div>
+        </div>
+        
+        <!-- QR Code -->
+        <div class="qr-lockscreen">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://yagofc23.github.io&format=png&margin=15&color=1e40af&bgcolor=ffffff"
+                 alt="QR Code - Portfólio Yago Fernandes"
+                 class="qrcode-lock">
+        </div>
+        
+        <!-- Informações do perfil -->
+        <div class="profile-lock">
+            <div class="name-lock">Yago Fernandes</div>
+            <div class="title-lock">Desenvolvedor Full Stack</div>
+            <div class="tagline-lock">HTML • CSS • Python • Django • Bootstrap</div>
+        </div>
+        
+        <!-- URL do portfólio -->
+        <div class="url-lock">
+            🔗 yagofc23.github.io
+        </div>
+        
+        <!-- Instruções -->
+        <div class="instructions-lock">
+            <p><strong>📱 Scan me!</strong></p>
+            <p>1. Abra a câmera do celular</p>
+            <p>2. Aponte para o QR Code</p>
+            <p>3. Toque na notificação</p>
+        </div>
+    </div>
+    
+    <!-- Dica de desbloqueio -->
+    <div class="unlock-hint">
+        ↑ Deslize para cima para ver portfolio ↑
+    </div>
+    
+    <!-- Botão de ação -->
+    <a href="https://yagofc23.github.io" target="_blank" class="action-btn">
+        🌐 Acessar Portfolio Completo
+    </a>
+
+    <script>
+        // Atualizar hora e data em tempo real
+        function updateDateTime() {
+            const now = new Date();
+            
+            // Formatar hora
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false 
+            };
+            const currentTime = now.toLocaleTimeString('pt-BR', timeOptions);
+            
+            // Formatar data
+            const dateOptions = {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            };
+            const currentDate = now.toLocaleDateString('pt-BR', dateOptions);
+            
+            // Atualizar elementos
+            document.getElementById('currentTime').textContent = currentTime;
+            document.getElementById('currentDate').textContent = currentDate;
+            document.getElementById('timeSmall').textContent = currentTime;
+        }
+        
+        // Atualizar a cada segundo
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        
+        // Criar partículas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Posição e tamanho aleatórios
+                const size = Math.random() * 6 + 2;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 10 + 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Efeito de toque no QR Code
+        document.querySelector('.qr-lockscreen').addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+        
+        // Prevenir comportamento padrão de toque
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        
+        // Inicializar
+        createParticles();
+        
+        // Feedback no console
+        console.log('📱 Tela de bloqueio carregada!');
+        console.log('🎯 QR Code pronto para escaneamento');
+        console.log('💼 Portfolio: https://yagofc23.github.io');
+        
+        // Modo tela cheia (opcional)
+        function enterFullscreen() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+        
+        // Descomente a linha abaixo se quiser tela cheia automática
+        // setTimeout(enterFullscreen, 1000);
+    </script>
+</body>
+</html>
