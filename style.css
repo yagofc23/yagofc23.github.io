@@ -1,4 +1,7 @@
-/* ===== VARIÁVEIS CSS ===== */
+.card-img-top {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
 :root {
     /* Cores principais */
     --primary-color: #2563eb;
@@ -573,4 +576,5 @@ footer {
 
 .stat-number {
     color: #ffffff;
+
 }
