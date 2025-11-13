@@ -39,7 +39,6 @@ body {
     background-color: var(--background-darker);
     color: var(--text-white);
     line-height: 1.6;
-    /* CORREÇÃO CRUCIAL: Espaço para a navbar fixa não cobrir o conteúdo */
     padding-top: 80px; 
 }
 
@@ -52,7 +51,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.95) !important; /* Fundo escuro quase sólido */
+    background-color: rgba(0, 0, 0, 0.95) !important; 
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
@@ -108,7 +107,33 @@ body {
     box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
 }
 
+/* Section Titles */
+.section-title {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-sm);
+    color: var(--text-white);
+    animation: fadeInUp 0.8s ease-out;
+    text-align: center; /* Centraliza títulos por padrão */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Centraliza o underline */
+    transform: translateX(-50%); /* Ajusta a posição */
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
 /* Habilidades */
+#habilidades {
+    background-color: var(--background-dark); /* Fundo escuro */
+}
+
 .skill-item {
     padding: var(--space-md);
     background: rgba(255, 255, 255, 0.05);
@@ -129,7 +154,20 @@ body {
     border-radius: 10px;
 }
 
+/* Certificações */
+.certification-item {
+    border-left: 4px solid var(--accent-color);
+    background: var(--card-bg); /* Fundo escuro para a certificação */
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Cards de Projetos */
+#projetos {
+    background-color: var(--background-dark); /* Fundo escuro */
+}
+
 .card {
     background-color: var(--card-bg);
     border: 1px solid #334155;
@@ -141,6 +179,7 @@ body {
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .tech-tags .badge {
@@ -152,6 +191,36 @@ body {
     border: 1px solid rgba(37, 99, 235, 0.3);
 }
 
+/* Formulário de Contato */
+#contato .card {
+    background-color: var(--card-bg); /* Fundo escuro para o card do formulário */
+    border: 1px solid #334155;
+    color: var(--text-white);
+}
+
+.form-control, .form-select {
+    background-color: #334155;
+    border: 1px solid #475569;
+    color: var(--text-white);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #334155;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+    color: var(--text-white);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+/* Seção Oportunidades */
+#oportunidades {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
 /* Footer */
 footer {
     background-color: var(--background-darker);
@@ -159,23 +228,36 @@ footer {
     border-top: 1px solid #334155;
 }
 
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Links em coluna */
+    align-items: center; /* Centraliza os links */
+    justify-content: center;
+    gap: 10px; /* Espaço entre os links */
+    margin-bottom: var(--space-md);
+}
+
 .footer-link {
     color: var(--text-white);
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    padding: 5px 0;
+    transition: all 0.2s ease-in-out;
 }
-.footer-link:hover { color: var(--primary-color); }
-.footer-link i { margin-right: 10px; width: 25px; }
+.footer-link:hover { 
+    color: var(--primary-color); 
+    transform: translateX(5px);
+}
+.footer-link i { margin-right: 10px; width: 25px; text-align: center; }
 
-/* ===== RESPONSIVIDADE (Onde a mágica acontece) ===== */
+
+/* ===== RESPONSIVIDADE ===== */
 
 /* Tablets e Celulares (menos de 768px) */
 @media (max-width: 768px) {
-    /* Ajuste do Título */
     .display-4 {
-        font-size: 2rem; /* Texto menor */
+        font-size: 2rem; 
         font-weight: 800;
     }
     
@@ -183,35 +265,47 @@ footer {
         font-size: 1rem;
     }
 
-    /* Botões Grandes e Fáceis de Clicar */
     .hero-section .btn {
-        width: 100%; /* Largura total */
+        width: 100%; 
         display: block;
-        margin-bottom: 10px; /* Espaço entre eles */
+        margin-bottom: 10px; 
         margin-right: 0 !important;
         padding: 12px;
     }
 
-    /* Estatísticas Ajustadas */
     .stat-number {
-        font-size: 2rem; /* Números menores */
+        font-size: 2rem; 
     }
 
-    /* Foto menor no celular */
     #sobre .rounded-circle {
         width: 180px;
         height: 180px;
         margin-bottom: 20px;
+    }
+
+    .section-title {
+        margin-bottom: var(--space-lg);
+        text-align: center;
+    }
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Empurra o botão do menu para a direita */
+    }
+    .navbar-brand {
+        margin-right: 0;
     }
 }
 
 /* Celulares muito pequenos (menos de 576px) */
 @media (max-width: 576px) {
     .navbar-brand {
-        font-size: 1.3rem; /* Logo menor */
+        font-size: 1.3rem; 
     }
     
-    /* Espaçamento interno dos cards */
     .card-body {
         padding: 1rem;
     }
