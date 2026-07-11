@@ -25,13 +25,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
-<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
-<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -192,40 +185,40 @@
         </div>
     </section>
 
-   <section id="certificacoes" class="py-5">
+    <section id="certificacoes" class="py-5">
         <div class="container">
             <h2 class="section-title">🏆 Certificações & Conquistas</h2>
             <div class="row g-4">
                 
                 <div class="col-md-6">
-                    <a href="./certificado python Full stack .pdf" download class="certification-item p-4 h-100 d-block text-decoration-none">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert1" class="certification-item p-4 h-100 d-block text-decoration-none">
                         <h5>🎓 Programador Full Stack em Python</h5>
                         <p><strong>Senac Rio</strong> | 2025</p>
                         <p>Certificação completa em desenvolvimento web full stack com foco em HTML, CSS, Python e frameworks modernos.</p>
                         <div class="mt-3">
-                            <span class="badge" style="background: var(--primary-color);"><i class="fas fa-download me-1"></i> Baixar Certificado</span>
+                            <span class="badge" style="background: var(--primary-color);"><i class="fas fa-eye me-1"></i> Visualizar Certificado</span>
                         </div>
                     </a>
                 </div>        
                 
                 <div class="col-md-6">
-                    <a href="./certificado do pacote office .pdf" download class="certification-item p-4 h-100 d-block text-decoration-none">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert2" class="certification-item p-4 h-100 d-block text-decoration-none">
                         <h5>💼 Pacote Office Completo</h5>
                         <p><strong>Microsoft Office Specialist</strong> | Concluído</p>
                         <p>Certificação em ferramentas de produtividade Microsoft Office (incluindo Excel avançado), essenciais para análise e ambiente corporativo.</p>
                         <div class="mt-3">
-                            <span class="badge" style="background: var(--primary-color);"><i class="fas fa-download me-1"></i> Baixar Certificado</span>
+                            <span class="badge" style="background: var(--primary-color);"><i class="fas fa-eye me-1"></i> Visualizar Certificado</span>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-6 mx-auto">
-                    <a href="./certificado-analista-de-dados-sql.pdf" download class="certification-item p-4 h-100 d-block text-decoration-none">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert3" class="certification-item p-4 h-100 d-block text-decoration-none">
                         <h5>📊 Analista de Dados com SQL</h5>
                         <p><strong>Senac(Rio)</strong> | em andamento</p>
                         <p>Certificação focada em modelagem de banco de dados, consultas complexas e análise estruturada de informações utilizando SQL.</p>
                         <div class="mt-3">
-                            <span class="badge" style="background: var(--primary-color);"><i class="fas fa-download me-1"></i> Baixar Certificado</span>
+                            <span class="badge" style="background: var(--primary-color);"><i class="fas fa-eye me-1"></i> Visualizar Certificado</span>
                         </div>
                     </a>
                 </div>
@@ -233,6 +226,48 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="modalCert1" tabindex="-1" aria-labelledby="modalCert1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="modalCert1Label">Programador Full Stack em Python</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 80vh;">
+                    <iframe src="./certificado python Full stack .pdf" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCert2" tabindex="-1" aria-labelledby="modalCert2Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="modalCert2Label">Pacote Office Completo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 80vh;">
+                    <iframe src="./certificado do pacote office .pdf" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCert3" tabindex="-1" aria-labelledby="modalCert3Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="modalCert3Label">Analista de Dados com SQL</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 80vh;">
+                    <iframe src="./certificado-analista-de-dados-sql.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="projetos" class="py-5">
         <div class="container">
@@ -579,44 +614,3 @@
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card, .skill-item, .certification-item, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
