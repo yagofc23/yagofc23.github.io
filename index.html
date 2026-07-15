@@ -116,9 +116,10 @@
                     
                     <p class="fs-5">Estou <strong>disponível para projetos freelancers e oportunidades de trabalho</strong> no mercado de tecnologia e dados. Minha motivação é resolver problemas reais de forma inteligente, seja escrevendo códigos eficientes para a web ou estruturando análises e dashboards para entregar o melhor resultado.</p>
                     
-                    <a href="./Currículo - Yago Fernandes.pdf" download class="btn btn-primary btn-lg mt-3">
-                        <i class="fas fa-download me-2"></i>Baixar Currículo PDF
-                    </a>
+                    <!-- Botão alterado para abrir o modal -->
+                    <button type="button" class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#modalCurriculo">
+                        <i class="fas fa-eye me-2"></i>Visualizar Currículo
+                    </button>
                 </div>
             </div>
         </div>
@@ -236,6 +237,24 @@
         </div>
     </section>
 
+    <!-- Novos Modais de Visualização -->
+    
+    <!-- Modal do Currículo -->
+    <div class="modal fade" id="modalCurriculo" tabindex="-1" aria-labelledby="modalCurriculoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="modalCurriculoLabel">Currículo - Yago Fernandes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 80vh;">
+                    <iframe src="./Currículo - Yago Fernandes.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais dos Certificados -->
     <div class="modal fade" id="modalCert1" tabindex="-1" aria-labelledby="modalCert1Label" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
