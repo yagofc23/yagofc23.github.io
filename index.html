@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +50,6 @@
                     
                     <p>No universo dos dados, aplico Python e bibliotecas de análise para transformar informações brutas em insights estratégicos. Atualmente, estou expandindo meus conhecimentos em <strong>Java Back-end</strong> e estou disponível para novos desafios.</p>
                     
-                    <!-- Habilidades Rápidas -->
                     <div class="quick-skills">
                         <span class="badge">Python</span>
                         <span class="badge">Django</span>
@@ -76,87 +75,121 @@
         </div>
     </section>
 
-    <!-- HABILIDADES -->
+    <!-- HABILIDADES (ACORDEÃO) -->
     <section id="habilidades">
         <div class="container">
             <h2 class="section-title">Habilidades Técnicas</h2>
-            <div class="row g-4">
-                
-                <!-- Análise de Dados -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <i class="fas fa-chart-pie fa-2x me-3" style="color: var(--primary-color);"></i>
-                            <h5>Análise de Dados</h5>
+            <p class="text-muted mb-4">Clique em uma habilidade para ver os detalhes.</p>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="skillsAccordion">
+                        
+                        <!-- Análise de Dados -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill1">
+                                    <i class="fas fa-chart-pie fa-lg me-3" style="color: var(--accent-color);"></i>
+                                    Análise de Dados
+                                </button>
+                            </h2>
+                            <div id="skill1" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Extração, limpeza e análise exploratória de dados. Geração de relatórios e insights de negócios utilizando Excel Avançado, Power BI e bibliotecas Python (Pandas).
+                                </div>
+                            </div>
                         </div>
-                        <p class="skill-desc">Extração, limpeza e análise exploratória de dados. Geração de relatórios e insights de negócios utilizando Excel Avançado, Power BI e bibliotecas Python (Pandas).</p>
-                    </div>
-                </div>
 
-                <!-- Python -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo me-3">
-                            <h5>Python</h5>
+                        <!-- Python -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill2">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo">
+                                    Python
+                                </button>
+                            </h2>
+                            <div id="skill2" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Desenvolvimento de lógica estruturada e orientada a objetos, criação de scripts automatizados, manipulação de arquivos, web scraping e análise de dados.
+                                </div>
+                            </div>
                         </div>
-                        <p class="skill-desc">Desenvolvimento de lógica estruturada e orientada a objetos, criação de scripts automatizados, manipulação de arquivos, web scraping e análise de dados.</p>
-                    </div>
-                </div>
-                
-                <!-- Django -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-logo me-3">
-                            <h5>Django Framework</h5>
-                        </div>
-                        <p class="skill-desc">Construção de aplicações web dinâmicas com arquitetura MVT, manipulação do Django ORM, controle de rotas e autenticação segura.</p>
-                    </div>
-                </div>
 
-                <!-- Java -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo me-3">
-                            <h5>Java Back-end</h5>
+                        <!-- Django -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill3">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" class="skill-logo">
+                                    Django Framework
+                                </button>
+                            </h2>
+                            <div id="skill3" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Construção de aplicações web dinâmicas com arquitetura MVT, manipulação do Django ORM, controle de rotas e autenticação segura.
+                                </div>
+                            </div>
                         </div>
-                        <p class="skill-desc">Em processo de formação pelo Senac. Focado na criação de APIs robustas, Programação Orientada a Objetos (POO) e construção de sistemas back-end escaláveis.</p>
-                    </div>
-                </div>
-                
-                <!-- HTML5 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo me-3">
-                            <h5>HTML5</h5>
-                        </div>
-                        <p class="skill-desc">Estruturação semântica de páginas web, garantindo acessibilidade, boas práticas de SEO e uma base sólida para interfaces modernas.</p>
-                    </div>
-                </div>
 
-                <!-- CSS3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo me-3">
-                            <h5>CSS3</h5>
+                        <!-- Java -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill4">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-logo">
+                                    Java Back-end
+                                </button>
+                            </h2>
+                            <div id="skill4" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Em processo de formação pelo Senac. Focado na criação de APIs robustas, Programação Orientada a Objetos (POO) e construção de sistemas back-end escaláveis.
+                                </div>
+                            </div>
                         </div>
-                        <p class="skill-desc">Estilização moderna e responsiva avançada utilizando Flexbox, Grid, animações e boas práticas de design para criar interfaces incríveis.</p>
-                    </div>
-                </div>
-                
-                <!-- Ferramentas -->
-                <div class="col-md-6 col-lg-4 mx-auto">
-                    <div class="skill-item">
-                        <div class="skill-header d-flex align-items-center mb-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo me-3" style="filter: invert(0.8);">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-logo me-3">
-                            <h5>Ferramentas</h5>
+
+                        <!-- HTML5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill5">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo">
+                                    HTML5
+                                </button>
+                            </h2>
+                            <div id="skill5" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Estruturação semântica de páginas web, garantindo acessibilidade, boas práticas de SEO e uma base sólida para interfaces modernas.
+                                </div>
+                            </div>
                         </div>
-                        <p class="skill-desc">Uso do Bootstrap para UI ágil, controle de versão com Git/GitHub (branches, PRs), e configuração profissional com VS Code e terminais.</p>
+
+                        <!-- CSS3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill6">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo">
+                                    CSS3
+                                </button>
+                            </h2>
+                            <div id="skill6" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Estilização moderna e responsiva avançada utilizando Flexbox, Grid, animações e boas práticas de design para criar interfaces incríveis.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ferramentas -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill7">
+                                    <i class="fab fa-github fa-lg me-3 text-white"></i>
+                                    Ferramentas & Versionamento
+                                </button>
+                            </h2>
+                            <div id="skill7" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                                <div class="accordion-body">
+                                    Uso do Bootstrap para UI ágil, controle de versão com Git/GitHub (branches, PRs), e configuração profissional com VS Code e terminais.
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -171,7 +204,7 @@
                 
                 <!-- Python -->
                 <div class="col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert1" class="certification-item p-4 h-100 d-none d-md-block text-decoration-none">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert1" class="certification-item p-4 d-none d-md-block text-decoration-none">
                         <h5>🎓 Programador Full Stack em Python</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-success rounded-pill px-3 py-2"><i class="fas fa-check-circle me-1"></i> Concluído</span>
@@ -183,7 +216,7 @@
                         </div>
                     </a>
                     
-                    <a href="./certificado python Full stack .pdf" target="_blank" class="certification-item p-4 h-100 d-block d-md-none text-decoration-none">
+                    <a href="./certificado python Full stack .pdf" target="_blank" class="certification-item p-4 d-block d-md-none text-decoration-none">
                         <h5>🎓 Programador Full Stack em Python</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-success rounded-pill px-3 py-2"><i class="fas fa-check-circle me-1"></i> Concluído</span>
@@ -193,9 +226,9 @@
                     </a>
                 </div>        
                 
-                <!-- Análise de Dados (AGORA CONCLUÍDO) -->
+                <!-- Análise de Dados -->
                 <div class="col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert3" class="certification-item p-4 h-100 d-none d-md-block text-decoration-none">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert3" class="certification-item p-4 d-none d-md-block text-decoration-none">
                         <h5>📊 Análise de Dados</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-success rounded-pill px-3 py-2"><i class="fas fa-check-circle me-1"></i> Concluído</span>
@@ -207,7 +240,7 @@
                         </div>
                     </a>
                     
-                    <a href="./certificado-analista-de-dados-sql.pdf" target="_blank" class="certification-item p-4 h-100 d-block d-md-none text-decoration-none">
+                    <a href="./certificado-analista-de-dados-sql.pdf" target="_blank" class="certification-item p-4 d-block d-md-none text-decoration-none">
                         <h5>📊 Análise de Dados</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-success rounded-pill px-3 py-2"><i class="fas fa-check-circle me-1"></i> Concluído</span>
@@ -217,9 +250,9 @@
                     </a>
                 </div>
 
-                <!-- Java (EM ANDAMENTO) -->
+                <!-- Java -->
                 <div class="col-md-6">
-                    <a href="#" class="certification-item p-4 h-100 d-none d-md-block text-decoration-none" onclick="event.preventDefault();">
+                    <a href="#" class="certification-item p-4 d-none d-md-block text-decoration-none" onclick="event.preventDefault();">
                         <h5>☕ Java Back-end</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-warning text-dark rounded-pill px-3 py-2"><i class="fas fa-tools me-1"></i> Em andamento</span>
@@ -231,19 +264,19 @@
 
                 <!-- Office -->
                 <div class="col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert2" class="certification-item p-4 h-100 d-none d-md-block text-decoration-none">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalCert2" class="certification-item p-4 d-none d-md-block text-decoration-none">
                         <h5>💼 Pacote Office Completo</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-success rounded-pill px-3 py-2"><i class="fas fa-check-circle me-1"></i> Concluído</span>
                         </div>
                         <p class="text-muted mb-2"><strong>Microsoft Office Specialist</strong></p>
-                        <p class="text-muted">Certificação em ferramentas de produtividade Microsoft Office (incluindo Excel avançado), essenciais para análise e ambiente corporativo.</p>
+                        <p class="text-muted">Certificação em ferramentas de produtividade Microsoft Office (incluindo Excel avançado).</p>
                         <div class="mt-3">
                             <span class="btn btn-sm btn-outline-primary"><i class="fas fa-eye me-1"></i> Visualizar</span>
                         </div>
                     </a>
                     
-                    <a href="./certificado do pacote office .pdf" target="_blank" class="certification-item p-4 h-100 d-block d-md-none text-decoration-none">
+                    <a href="./certificado do pacote office .pdf" target="_blank" class="certification-item p-4 d-block d-md-none text-decoration-none">
                         <h5>💼 Pacote Office Completo</h5>
                         <div class="mb-3 mt-2">
                             <span class="badge bg-success rounded-pill px-3 py-2"><i class="fas fa-check-circle me-1"></i> Concluído</span>
@@ -265,7 +298,7 @@
                 
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
-                        <img src="./image/linkmanager-thumb.png" alt="LinkManager Dashboard" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
+                        <img src="./image/linkmanager-thumb.png" alt="LinkManager" class="card-img-top" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">🔗 LinkManager - SaaS</h5>
                             <div class="mb-3 mt-2">
@@ -289,7 +322,7 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
-                        <img src="./image/conektei-thumb.png" alt="Conektei Plataforma" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
+                        <img src="./image/conektei-thumb.png" alt="Conektei" class="card-img-top" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">🤝 Conektei - Consultoria</h5>
                             <div class="mb-3 mt-2">
@@ -313,7 +346,7 @@
                 
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100"> 
-                        <img src="./image/death%20note.png" alt="Death Note Online" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
+                        <img src="./image/death%20note.png" alt="Death Note" class="card-img-top" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">📓 Death Note Online</h5>
                             <div class="mb-3 mt-2">
@@ -361,7 +394,7 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
-                        <img src="image/projeto%202.png" alt="Web Scraper Python" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
+                        <img src="image/projeto%202.png" alt="Web Scraper" class="card-img-top" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">🤖 Bot de Notícias</h5>
                             <div class="mb-3 mt-2">
@@ -373,7 +406,6 @@
                             <div class="tech-tags mb-3">
                                 <span class="badge">Python</span>
                                 <span class="badge">BeautifulSoup4</span>
-                                <span class="badge">Requests</span>
                             </div>
                             <div class="mt-auto d-grid gap-2">
                                 <a href="https://github.com/yagofc23/automacao-python-g1" target="_blank" class="btn btn-primary btn-sm rounded-pill">📁 Ver Código</a>
@@ -384,7 +416,7 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100">
-                        <img src="image/devSchool.png" alt="DevSchools" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;">
+                        <img src="image/devSchool.png" alt="DevSchools" class="card-img-top" style="height: 220px; object-fit: cover; object-position: top;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">🐸 DevSchools</h5>
                             <div class="mb-3 mt-2">
@@ -396,7 +428,6 @@
                             <div class="tech-tags mb-3">
                                 <span class="badge">Django 5</span>
                                 <span class="badge">SQLite</span>
-                                <span class="badge">Bootstrap</span>
                             </div>
                             <div class="mt-auto d-grid gap-2">
                                 <a href="https://github.com/yagofc23/devSchools" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">📁 Código</a>
@@ -413,7 +444,7 @@
     <!-- OPORTUNIDADES -->
     <section id="oportunidades" class="py-5">
         <div class="container text-center py-4">
-            <h2 class="section-title text-white">Estou Aberto a Oportunidades</h2>
+            <h2 class="section-title text-white mx-auto" style="display: table;">Estou Aberto a Oportunidades</h2>
             <div class="row justify-content-center mt-5">
                 <div class="col-md-4 mb-4">
                     <div class="opportunity-item h-100">
@@ -438,7 +469,7 @@
                 </div>
             </div>
             <div class="mt-4">
-                <a href="#contato" class="btn btn-light btn-lg text-primary fw-bold px-5 rounded-pill shadow">Vamos Conversar!</a>
+                <a href="#contato" class="btn btn-light btn-lg text-dark fw-bold px-5 rounded-pill">Vamos Conversar!</a>
             </div>
         </div>
     </section>
@@ -487,45 +518,30 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="contact-column text-center p-4 h-100">
-                        <div class="mb-3">
-                            <i class="fab fa-whatsapp fa-3x" style="color: #25D366;"></i>
-                        </div>
+                        <div class="mb-3"><i class="fab fa-whatsapp fa-3x" style="color: #25D366;"></i></div>
                         <h5 class="fw-bold">WhatsApp</h5>
                         <p class="mb-3">(21) 97921-2853</p>
-                        <a href="https://wa.me/5521979212853" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">
-                            Enviar Mensagem
-                        </a>
+                        <a href="https://wa.me/5521979212853" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Enviar Mensagem</a>
                     </div>
                 </div>
-                
                 <div class="col-md-4 mb-4">
                     <div class="contact-column text-center p-4 h-100">
-                        <div class="mb-3">
-                            <i class="fab fa-github fa-3x"></i>
-                        </div>
+                        <div class="mb-3"><i class="fab fa-github fa-3x text-white"></i></div>
                         <h5 class="fw-bold">GitHub</h5>
                         <p class="mb-3">yagofc23</p>
-                        <a href="https://github.com/yagofc23" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">
-                            Ver Perfil
-                        </a>
+                        <a href="https://github.com/yagofc23" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Ver Perfil</a>
                     </div>
                 </div>
-                
                 <div class="col-md-4 mb-4">
                     <div class="contact-column text-center p-4 h-100">
-                        <div class="mb-3">
-                            <i class="fas fa-envelope fa-3x" style="color: var(--primary-color);"></i>
-                        </div>
+                        <div class="mb-3"><i class="fas fa-envelope fa-3x" style="color: var(--accent-color);"></i></div>
                         <h5 class="fw-bold">Email</h5>
                         <p class="mb-3" style="font-size: 0.9rem;">yagofernandesdacosta@gmail.com</p>
-                        <a href="mailto:yagofernandesdacosta@gmail.com" class="btn btn-outline-primary btn-sm rounded-pill">
-                            Enviar Email
-                        </a>
+                        <a href="mailto:yagofernandesdacosta@gmail.com" class="btn btn-outline-primary btn-sm rounded-pill">Enviar Email</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-4 pt-4 border-top">
+            <div class="text-center mt-4 pt-4 border-top border-secondary">
                 <p class="mb-0 text-muted fw-bold">&copy; 2025 Yago Fernandes. Todos os direitos reservados.</p>
             </div>
         </div>
@@ -534,12 +550,12 @@
     <!-- MODAIS (Currículo e Certificados) -->
     <div class="modal fade" id="modalCurriculo" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-white">
-                <div class="modal-header border-0 pb-0">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title fw-bold">Currículo - Yago Fernandes</h5>
                     <div>
                         <a href="./Currículo - Yago Fernandes.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill me-2">
-                            <i class="fas fa-external-link-alt me-1"></i> Abrir em nova aba
+                            <i class="fas fa-external-link-alt me-1"></i> Abrir
                         </a>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
@@ -553,8 +569,8 @@
 
     <div class="modal fade" id="modalCert1" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-white">
-                <div class="modal-header border-0 pb-0">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title fw-bold">Certificado Python Full Stack</h5>
                     <div>
                         <a href="./certificado python Full stack .pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill me-2">
@@ -572,8 +588,8 @@
 
     <div class="modal fade" id="modalCert2" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-white">
-                <div class="modal-header border-0 pb-0">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title fw-bold">Certificado Pacote Office</h5>
                     <div>
                         <a href="./certificado do pacote office .pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill me-2">
@@ -591,8 +607,8 @@
 
     <div class="modal fade" id="modalCert3" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-white">
-                <div class="modal-header border-0 pb-0">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title fw-bold">Certificado Analista de Dados</h5>
                     <div>
                         <a href="./certificado-analista-de-dados-sql.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill me-2">
@@ -610,6 +626,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Rolagem suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
