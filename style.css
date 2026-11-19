@@ -408,3 +408,43 @@ footer {
     #sobre p { text-align: center; }
     .quick-skills { justify-content: center; }
 }
+
+
+/* ===== Melhorias v2 ===== */
+html { scroll-padding-top: 80px; }
+section { padding: clamp(64px, 9vw, 100px) 0; }
+.greeting { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.role { color: #93c5fd; font-size: clamp(1.05rem, 2.4vw, 1.3rem); }
+#sobre p { max-width: 60ch; }
+.availability { display: flex; width: fit-content; align-items: center; gap: 10px; padding: 8px 16px; margin-bottom: 24px; border: 1px solid rgba(34,197,94,.35); background: rgba(34,197,94,.08); color: #86efac; border-radius: var(--radius-pill); font-size: .9rem; font-weight: 600; }
+.availability .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+.quick-skills { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Habilidades: sempre visíveis */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.skill-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 28px; }
+.skill-card.featured { grid-column: 1 / -1; border-color: var(--primary-color); background: linear-gradient(135deg, rgba(30,58,138,.25), var(--bg-card)); }
+.skill-card h3 { display: flex; align-items: center; gap: 14px; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+.skill-card p { color: var(--text-muted); margin: 0; max-width: 70ch; }
+.skill-ic { display: grid; place-items: center; width: 36px; height: 36px; font-size: 1.4rem; color: var(--accent-color); }
+.skill-card .skill-logo { margin: 0; }
+
+/* Certificações */
+.certification-item h3 { color: var(--text-main); font-weight: 800; margin-bottom: 4px; }
+.certification-item.featured { border-color: var(--primary-color); background: linear-gradient(135deg, rgba(30,58,138,.25), var(--bg-card)); }
+.cert-icon { flex: 0 0 52px; height: 52px; display: grid; place-items: center; border-radius: var(--radius-sm); background: rgba(59,130,246,.12); color: var(--accent-color); font-size: 1.4rem; }
+.cert-meta { color: var(--text-muted); font-weight: 600; font-size: .95rem; margin-bottom: 8px; }
+.cert-action { color: var(--accent-color); font-weight: 700; font-size: .95rem; }
+a.certification-item:hover .cert-action { text-decoration: underline; }
+
+/* Movimento mais discreto */
+#sobre img:hover { transform: none; }
+.card:hover, .certification-item:hover, .opportunity-item:hover { transform: translateY(-4px); }
+
+/* Acessibilidade */
+:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+    .card:hover, .certification-item:hover, .opportunity-item:hover, .quick-skills .badge:hover, .btn-primary:hover { transform: none; }
+}
+@media (max-width: 768px) { .availability { margin-inline: auto; } }
