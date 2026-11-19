@@ -442,3 +442,28 @@ a.certification-item:hover .cert-action { text-decoration: underline; }
     .card:hover, .certification-item:hover, .opportunity-item:hover, .quick-skills .badge:hover, .btn-primary:hover { transform: none; }
 }
 @media (max-width: 768px) { .availability { margin-inline: auto; } }
+
+
+/* ===== Melhorias v3 ===== */
+#sobre { background: radial-gradient(circle at 12% 20%, rgba(30,58,138,.22) 0%, transparent 45%), radial-gradient(circle at 92% 88%, rgba(59,130,246,.08) 0%, transparent 40%); }
+#sobre img { width: 300px; height: 300px; border-radius: 50%; object-position: center top; border: 4px solid var(--bg-body); box-shadow: 0 0 0 3px var(--accent-color), 0 0 0 14px rgba(59,130,246,.14), var(--shadow-blue); }
+#sobre img:hover { border-color: var(--bg-body); }
+.nav-link.active { position: relative; }
+.nav-link.active::after { content: ''; position: absolute; left: 1rem; right: 1rem; bottom: 2px; height: 2px; border-radius: 2px; background: var(--accent-color); }
+.btn-primary { background: linear-gradient(135deg, var(--primary-color), #2563eb); }
+
+/* Habilidades por área */
+.skill-group-title { display: flex; align-items: center; gap: 12px; font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; }
+.skill-group-title i { display: grid; place-items: center; width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(59,130,246,.12); color: var(--accent-color); font-size: 1rem; }
+#habilidades .accordion-item { margin-bottom: 12px; }
+#habilidades .accordion-button { padding: 18px 22px; font-size: 1.02rem; }
+.used-in { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color); font-size: .875rem; color: var(--text-muted); }
+.used-in a { padding: 4px 12px; border-radius: var(--radius-pill); background: rgba(59,130,246,.1); border: 1px solid rgba(59,130,246,.25); color: var(--accent-color); font-weight: 600; text-decoration: none; transition: var(--transition); }
+.used-in a:hover { background: var(--primary-color); border-color: var(--primary-color); color: #fff; }
+
+/* Projetos */
+.card { box-shadow: var(--shadow-sm); }
+.card .card-img-top { border-bottom: 1px solid var(--border-color); }
+.card:target { border-color: var(--accent-color); box-shadow: var(--shadow-blue); }
+
+@media (max-width: 768px) { #sobre img { width: 240px; height: 240px; } }
