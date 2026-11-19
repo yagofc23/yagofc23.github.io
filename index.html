@@ -76,66 +76,78 @@
     <section id="habilidades">
         <div class="container">
             <h2 class="section-title">Habilidades Técnicas</h2>
-            <p class="text-muted mb-4">Clique em uma habilidade para ver os detalhes.</p>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="accordion" id="skillsAccordion">
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill1" aria-expanded="false" aria-controls="skill1"><span class="skill-ic"><i class="fas fa-chart-pie"></i></span>Análise de Dados</button>
-                            </h3>
-                            <div id="skill1" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Extração, limpeza e análise exploratória de dados. Relatórios e insights de negócio com Excel Avançado, Power BI e Pandas.</div>
+            <p class="text-muted mb-5">Organizadas por área. Clique em uma habilidade para ver como eu a uso e em quais projetos.</p>
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-6">
+                    <h3 class="skill-group-title"><i class="fas fa-chart-pie"></i>Dados</h3>
+                    <div class="accordion" id="acc0">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk1" aria-expanded="false" aria-controls="sk1"><span class="skill-ic"><i class="fas fa-chart-pie"></i></span>Análise de Dados</button></h4>
+                                <div id="sk1" class="accordion-collapse collapse" data-bs-parent="#acc0"><div class="accordion-body">Extração, limpeza e análise exploratória de dados. Relatórios e insights de negócio com Excel Avançado, Power BI e Pandas.<div class="used-in"><span>Usado em</span><a href="#p-bot">Bot de Notícias</a><a href="#certificacoes">Formação Big Data Science</a></div></div></div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill2" aria-expanded="false" aria-controls="skill2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" class="skill-logo">Python</button>
-                            </h3>
-                            <div id="skill2" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Lógica estruturada e orientada a objetos, scripts de automação, manipulação de arquivos, web scraping e análise de dados.</div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk2" aria-expanded="false" aria-controls="sk2"><span class="skill-ic"><i class="fas fa-spider"></i></span>Web scraping e ETL</button></h4>
+                                <div id="sk2" class="accordion-collapse collapse" data-bs-parent="#acc0"><div class="accordion-body">Coleta automática de dados de portais com BeautifulSoup4, deixando as informações organizadas para análise posterior.<div class="used-in"><span>Usado em</span><a href="#p-bot">Bot de Notícias</a></div></div></div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill3" aria-expanded="false" aria-controls="skill3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" class="skill-logo">Django</button>
-                            </h3>
-                            <div id="skill3" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Aplicações web com arquitetura MVT, Django ORM, rotas e autenticação segura.</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="skill-group-title"><i class="fas fa-screwdriver-wrench"></i>Ferramentas e aplicações desktop</h3>
+                    <div class="accordion" id="acc1">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk3" aria-expanded="false" aria-controls="sk3"><span class="skill-ic"><i class="fab fa-github"></i></span>Git e GitHub</button></h4>
+                                <div id="sk3" class="accordion-collapse collapse" data-bs-parent="#acc1"><div class="accordion-body">Controle de versão com branches e pull requests, um repositório no GitHub para cada projeto e rotina de trabalho no VS Code e no terminal.<div class="used-in"><span>Usado em</span><a href="#projetos">Todos os projetos</a></div></div></div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill4" aria-expanded="false" aria-controls="skill4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" class="skill-logo">Java Back-end</button>
-                            </h3>
-                            <div id="skill4" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Em formação pelo Senac: APIs, Programação Orientada a Objetos e sistemas back-end escaláveis.</div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk4" aria-expanded="false" aria-controls="sk4"><span class="skill-ic"><i class="fas fa-desktop"></i></span>Pygame e Tkinter</button></h4>
+                                <div id="sk4" class="accordion-collapse collapse" data-bs-parent="#acc1"><div class="accordion-body">Interface desktop em dark mode, com playlist dinâmica e equalizador.<div class="used-in"><span>Usado em</span><a href="#p-musicplayer">Music Player</a></div></div></div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill5" aria-expanded="false" aria-controls="skill5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" class="skill-logo">HTML5</button>
-                            </h3>
-                            <div id="skill5" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Estrutura semântica de páginas, acessibilidade e boas práticas de SEO.</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="skill-group-title"><i class="fas fa-server"></i>Back-end e bancos de dados</h3>
+                    <div class="accordion" id="acc2">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk5" aria-expanded="false" aria-controls="sk5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" class="skill-logo">Python</button></h4>
+                                <div id="sk5" class="accordion-collapse collapse" data-bs-parent="#acc2"><div class="accordion-body">Lógica estruturada e orientada a objetos, scripts de automação, manipulação de arquivos, web scraping e análise de dados.<div class="used-in"><span>Usado em</span><a href="#p-linkmanager">LinkManager</a><a href="#p-conektei">Conektei</a><a href="#p-devschools">DevSchools</a><a href="#p-musicplayer">Music Player</a><a href="#p-bot">Bot de Notícias</a></div></div></div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill6" aria-expanded="false" aria-controls="skill6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" class="skill-logo">CSS3</button>
-                            </h3>
-                            <div id="skill6" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Interfaces responsivas com Flexbox, Grid e animações.</div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk6" aria-expanded="false" aria-controls="sk6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="" class="skill-logo">Django</button></h4>
+                                <div id="sk6" class="accordion-collapse collapse" data-bs-parent="#acc2"><div class="accordion-body">Aplicações web com arquitetura MVT, Django ORM, rotas e autenticação segura.<div class="used-in"><span>Usado em</span><a href="#p-conektei">Conektei</a><a href="#p-devschools">DevSchools</a></div></div></div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#skill7" aria-expanded="false" aria-controls="skill7"><span class="skill-ic"><i class="fab fa-github"></i></span>Git, GitHub e Bootstrap</button>
-                            </h3>
-                            <div id="skill7" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                                <div class="accordion-body">Controle de versão (branches, PRs), UI ágil com Bootstrap e rotina de trabalho no VS Code e terminal.</div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk7" aria-expanded="false" aria-controls="sk7"><span class="skill-ic"><i class="fas fa-flask"></i></span>Flask</button></h4>
+                                <div id="sk7" class="accordion-collapse collapse" data-bs-parent="#acc2"><div class="accordion-body">Aplicação full stack com rotas, autenticação segura e analytics de cliques.<div class="used-in"><span>Usado em</span><a href="#p-linkmanager">LinkManager</a></div></div></div>
                             </div>
-                        </div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk8" aria-expanded="false" aria-controls="sk8"><span class="skill-ic"><i class="fas fa-database"></i></span>SQLAlchemy e SQLite</button></h4>
+                                <div id="sk8" class="accordion-collapse collapse" data-bs-parent="#acc2"><div class="accordion-body">Modelagem e consulta de dados por ORM: SQLAlchemy no LinkManager e SQLite no DevSchools.<div class="used-in"><span>Usado em</span><a href="#p-linkmanager">LinkManager</a><a href="#p-devschools">DevSchools</a></div></div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk9" aria-expanded="false" aria-controls="sk9"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" class="skill-logo">Java Back-end</button></h4>
+                                <div id="sk9" class="accordion-collapse collapse" data-bs-parent="#acc2"><div class="accordion-body">Em formação pelo Senac (previsão: 15/01/2027): POO, APIs, Spring Boot e integração com bancos de dados.<div class="used-in"><span>Em estudo, ainda sem projeto público.</span></div></div></div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="skill-group-title"><i class="fas fa-laptop-code"></i>Front-end</h3>
+                    <div class="accordion" id="acc3">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk10" aria-expanded="false" aria-controls="sk10"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" class="skill-logo">HTML5</button></h4>
+                                <div id="sk10" class="accordion-collapse collapse" data-bs-parent="#acc3"><div class="accordion-body">Estrutura semântica de páginas, acessibilidade e boas práticas de SEO.<div class="used-in"><span>Usado em</span><a href="#p-deathnote">Death Note Online</a><a href="#sobre">Este portfólio</a></div></div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk11" aria-expanded="false" aria-controls="sk11"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" class="skill-logo">CSS3</button></h4>
+                                <div id="sk11" class="accordion-collapse collapse" data-bs-parent="#acc3"><div class="accordion-body">Interfaces responsivas com Flexbox, Grid e animações.<div class="used-in"><span>Usado em</span><a href="#p-deathnote">Death Note Online</a><a href="#p-conektei">Conektei</a><a href="#sobre">Este portfólio</a></div></div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk12" aria-expanded="false" aria-controls="sk12"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" class="skill-logo">JavaScript</button></h4>
+                                <div id="sk12" class="accordion-collapse collapse" data-bs-parent="#acc3"><div class="accordion-body">Manipulação do DOM para criar interações, como a simulação do caderno no Death Note Online.<div class="used-in"><span>Usado em</span><a href="#p-deathnote">Death Note Online</a><a href="#sobre">Este portfólio</a></div></div></div>
+                            </div>
+                            <div class="accordion-item">
+                                <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sk13" aria-expanded="false" aria-controls="sk13"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" class="skill-logo">Bootstrap</button></h4>
+                                <div id="sk13" class="accordion-collapse collapse" data-bs-parent="#acc3"><div class="accordion-body">Interfaces responsivas e consistentes com os componentes e o sistema de grid.<div class="used-in"><span>Usado em</span><a href="#p-linkmanager">LinkManager</a><a href="#sobre">Este portfólio</a></div></div></div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -149,7 +161,7 @@
             <div class="row g-4">
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="p-bot">
                         <img src="image/projeto%202.png" alt="Web Scraper" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">Bot de Notícias</h5>
@@ -162,6 +174,7 @@
                             <div class="tech-tags mb-3">
                                 <span class="badge">Python</span>
                                 <span class="badge">BeautifulSoup4</span>
+                                <span class="badge">Web Scraping</span>
                             </div>
                             <div class="mt-auto d-grid gap-2">
                                 <a href="https://github.com/yagofc23/automacao-python-g1" target="_blank" class="btn btn-primary btn-sm rounded-pill"><i class="fab fa-github me-1"></i>Ver Código</a>
@@ -171,7 +184,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="p-linkmanager">
                         <img src="./image/linkmanager-thumb.png" alt="LinkManager" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">LinkManager - SaaS</h5>
@@ -182,7 +195,8 @@
                                 <p class="mb-2">Sistema Full Stack com autenticação segura, analytics de cliques e temas dinâmicos.</p>
                             </div>
                             <div class="tech-tags mb-3">
-                                <span class="badge">Python Flask</span>
+                                <span class="badge">Python</span>
+                                <span class="badge">Flask</span>
                                 <span class="badge">SQLAlchemy</span>
                                 <span class="badge">Bootstrap</span>
                             </div>
@@ -195,7 +209,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="p-conektei">
                         <img src="./image/conektei-thumb.png" alt="Conektei" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">Conektei - Consultoria</h5>
@@ -219,7 +233,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100"> 
+                    <div class="card h-100" id="p-deathnote"> 
                         <img src="./image/death%20note.png" alt="Death Note" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">Death Note Online</h5>
@@ -243,7 +257,7 @@
                 </div>
                 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="p-musicplayer">
                         <img src="./image/music_player.png" class="card-img-top" loading="lazy" alt="Music Player" style="height: 220px; object-fit: cover; object-position: top;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">Music Player</h5>
@@ -267,7 +281,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
+                    <div class="card h-100" id="p-devschools">
                         <img src="image/devSchool.png" alt="DevSchools" class="card-img-top" loading="lazy" style="height: 220px; object-fit: cover; object-position: top;">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title mb-1">DevSchools</h5>
@@ -278,6 +292,7 @@
                                 <p class="mb-2">Sistema de gestão de cursos e alunos com painel administrativo.</p>
                             </div>
                             <div class="tech-tags mb-3">
+                                <span class="badge">Python</span>
                                 <span class="badge">Django 5</span>
                                 <span class="badge">SQLite</span>
                             </div>
